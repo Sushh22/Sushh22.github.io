@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     title: "DesiMunch Website",
     img: DesiMunchImg,
-    desc: "Website of a restaurant completly styled using Bootstrap.",
+    desc: "Website of a restaurant completely styled using Bootstrap.",
     live: "https://sushh22.github.io/DesiMunch/",
     repo: "https://github.com/Sushh22/DesiMunch",
   },

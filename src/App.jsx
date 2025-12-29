@@ -6,6 +6,7 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 
 export default function App() {
+  
   return (
     <div className="min-h-screen bg-purple-100 dark:bg-[#1F3A4B] transition-colors duration-300">
       <Header />
