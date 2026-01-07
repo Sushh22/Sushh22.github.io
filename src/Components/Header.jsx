@@ -52,7 +52,7 @@ export default function Header() {
         <div className="relative" ref={navRef}>
           {/* Sliding pill */}
           <span
-            className="absolute top-0 bottom-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-300"
+            className="absolute top-0 bottom-0 bg-gradient-to-r from-green-500 to-purple-500 rounded-full transition-all duration-300"
             style={{ left: indicator.left, width: indicator.width }}
           />
           <ul className="flex space-x-4 font-medium  relative z-10 text-gray-600 dark:text-white">

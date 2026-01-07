@@ -1,33 +1,32 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MyntraIMG from "../assets/MyntraIMG.png";
-import DesiMunchImg from "../assets/DesiMunchImg.png";
-import ReactQuizAppImg from "../assets/ReactQuizAppImg.png";
-
+import FoodOrderingIMG from "../assets/FoodOrdering.png"
+import FormIMG from "../assets/FormIMG.png"
 const projects = [
   {
     id: 1,
-    title: "Myntra Clone",
-    img: MyntraIMG, 
-    desc: "A clone of the Myntra shopping platform with React and Tailwind along with payment gateway integration.",
-    live: "https://sushh22.github.io/MyntraClone/",
-    repo: "https://github.com/Sushh22/MyntraClone",
+    title: "Multi-step Subscription Form",
+    img: FormIMG, 
+    desc: "Built a multi-step form using React & React Router, with step-wise nav, state persistence across routes and dynamic plan/add-on selection. Added form validation, reusable layout component & summary view to ensure smooth ux.",
+    live: "https://sushh22.github.io/React_FoodOrder/",
+    repo: "https://github.com/Sushh22/React_MultiStep_Form",
   },
   {
     id: 2,
-    title: "DesiMunch Website",
-    img: DesiMunchImg,
-    desc: "Website of a restaurant completely styled using Bootstrap.",
-    live: "https://sushh22.github.io/DesiMunch/",
-    repo: "https://github.com/Sushh22/DesiMunch",
+    title: "Food Ordering Web Application",
+    img: FoodOrderingIMG,
+    desc: "Created a responsive app using React, with meal listing, category-based filtering, and cart management with Context API. Implemented checkout flow with custom hooks, and backend integration for order submission.",
+    live: "https://sushh22.github.io/React_MultiStep_Form/",
+    repo: "https://github.com/Sushh22/React_FoodOrder",
   },
   {
     id: 3,
-    title: "React QuizApp",
-    img: ReactQuizAppImg,
-    desc: "A Quiz app using Reactjs worked with Effect dependencies and UseCallback.",
-    live: "https://sushh22.github.io/ReactQuizApp/",
-    repo: "https://github.com/Sushh22/ReactQuizApp",
+     title: "Myntra Clone",
+    img: MyntraIMG, 
+    desc: "Developed a Myntra e-commerce app using React, Vanilla Js, and Tailwind CSS, with end-to-end shopping flow and payment integration with Razorpay API.",
+    live: "https://sushh22.github.io/MyntraClone/",
+    repo: "https://github.com/Sushh22/MyntraClone",
   },
 ];
 
@@ -54,7 +53,7 @@ export default function Projects() {
           onClick={prevProject}
           className="absolute left-0 p-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition"
         >
-          ⬅
+          ‹
         </button>
 
         {/* Carousel Content */}
@@ -106,7 +105,7 @@ export default function Projects() {
           onClick={nextProject}
           className="absolute right-0 p-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition"
         >
-          ➡
+          ›
         </button>
       </div>
     </section>
