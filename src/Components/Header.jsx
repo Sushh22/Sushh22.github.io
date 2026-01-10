@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("");
   const [indicator, setIndicator] = useState({ left: 0, width: 0 });
   const navRef = useRef(null);
 
@@ -18,22 +18,20 @@ export default function Header() {
   const handleClick = (item, e) => {
     setActive(item.name);
 
-    // move pill
     const rect = e.currentTarget.getBoundingClientRect();
     const containerRect = navRef.current.getBoundingClientRect();
+
     setIndicator({
       left: rect.left - containerRect.left,
       width: rect.width,
     });
 
-    // smooth scroll
     const section = document.getElementById(item.id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
   useEffect(() => {
-    // Toggle dark mode class on <html>
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -44,7 +42,7 @@ export default function Header() {
   return (
     <header className="w-[75vw] mx-auto mt-6 rounded-2xl shadow-lg sticky top-1 z-50  bg-gray-100 dark:bg-[#2F363B] ">
       <nav className="flex items-center justify-between px-8 py-4">
-        <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+        <h3 className="text-2xl font-bold bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
           Sushmitha K N
         </h3>
 
@@ -52,7 +50,7 @@ export default function Header() {
         <div className="relative" ref={navRef}>
           {/* Sliding pill */}
           <span
-            className="absolute top-0 bottom-0 bg-gradient-to-r from-green-500 to-purple-500 rounded-full transition-all duration-300"
+            className="absolute top-0 bottom-0 bg-linear-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-300"
             style={{ left: indicator.left, width: indicator.width }}
           />
           <ul className="flex space-x-4 font-medium  relative z-10 text-gray-600 dark:text-white">
@@ -71,7 +69,7 @@ export default function Header() {
           </ul>
         </div>
 
-        {/* Right - Theme Toggle */}
+        {/* Right Theme Toggle */}
         <button
           onClick={() => setDarkMode(!darkMode)}
           className="p-2 rounded-full bg-white/20 hover:bg-white/30 dark:bg-black/20 dark:hover:bg-black/30 transition"

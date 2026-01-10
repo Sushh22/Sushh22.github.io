@@ -1,44 +1,4 @@
-// import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
-// import { SiTailwindcss } from "react-icons/si";
-// import { VscVscode } from 'react-icons/vsc';
 
-// export default function Skills() {
-//   return (
-//     <section className="w-[75vw] mx-auto mt-10 rounded-2xl bg-[#2F363B] shadow-lg p-10 text-white">
-//       {/* Top Text */}
-//       <h2 className="text-5xl font-bold text-center mb-10">
-//         "A Frontend Developer with skills in...
-//       </h2>
-
-//       {/* Skills Grid */}
-//       <div className="flex items-center justify-center gap-8">
-//         {/* Left Icons */}
-//         <div className="flex flex-col items-center space-y-6 text-5xl text-pink-400">
-//           <FaHtml5 title="HTML5" />
-//           <FaCss3Alt title="CSS3" />
-//           <FaJs title="JavaScript" />
-//           <VscVscode title="VS Code" />
-//         </div>
-
-//         {/* Center Text */}
-//         <div className="w-[60%] h-[350px]flex-1 text-center bg-[#1F3A4B]/30 rounded-xl p-10 text-xl leading-relaxed backdrop-blur-sm ">
-//           HTML, CSS, JavaScript, React, Tailwind, and more. This journey began
-//           with a curiosity about how websites come alive and has since grown
-//           into a full-fledged passion. I have leveraged these technologies to
-//           design and develop interactive, responsive websites."
-//         </div>
-
-//         {/* Right Icons */}
-//         <div className="flex flex-col items-center space-y-6 text-5xl text-purple-400">
-//           <SiTailwindcss title="Tailwind CSS" />
-//           <FaReact title="React" />
-//           <FaGitAlt title="Git" />
-//           <FaGithub title="GitHub" />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";

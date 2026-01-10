@@ -11,7 +11,7 @@ export default function Home() {
                  shadow-lg p-10 flex items-center gap-6 
                  transition-colors duration-300"
     >
-      {/* Left side - Text */}
+      {/* Left side text */}
       <div className="flex-1 text-gray-800 dark:text-white space-y-4 transition-colors duration-300">
         <h1 className="text-5xl font-bold relative inline-block">
           <span className="relative z-10">
@@ -34,16 +34,14 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Right side - Image with floating pink blob */}
+      {/* Right side image with floating pink blob */}
       <div className="flex-1 flex justify-center relative">
         {/* Pink floating blob */}
         <div className="absolute w-[470px] h-[320px] bg-pink-500 rounded blur-3xl opacity-80 animate-blob"></div>
 
         <div className="relative inline-block">
-          {/* White outline frame */}
+          {/* White outline around img */}
           <div className="absolute inset-0 border-4  dark:border-white border-gray-600 rounded-[10px_0_10px_0] -translate-x-3.5 -translate-y-3.5"></div>
-
-          {/* Image itself */}
           <img
             src={sushmitha}
             alt="Sushmitha"

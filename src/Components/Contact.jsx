@@ -1,6 +1,6 @@
-
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const form = useRef();
@@ -10,19 +10,20 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_7my0l06",   // service ID from EmailJS 
-        "template_fllqlop",  // template ID from EmailJS 
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "922cYFUIXn37oLNaA"  // public key from EmailJS 
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!");
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
-          alert("Failed to send message. Try again later.");
+          toast.error("Failed to send message. Try again later.");
         }
       );
   };
@@ -77,7 +78,7 @@ export default function Contact() {
         />
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-pink-500 to-purple-500 
+          className="w-full bg-linear-to-r from-pink-500 to-purple-500 
                      py-3 rounded-md font-semibold 
                      text-white hover:opacity-90 transition"
         >
